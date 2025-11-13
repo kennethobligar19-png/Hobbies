@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --lavender: #CBB4F9;        
+  --pink-primary: #F7B7D9;    
+  --gold-accent: #FFD77F;     
+  --white: #FFFFFF;
+  --dark-bg: #2E2A33;         
+  --card-bg: rgba(46, 42, 51, 0.75); 
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--lavender), #FDE7F0);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Header */
+.site-header {
+  width: 100%;
+  padding: 40px 20px 30px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #F7B7D9, #CBB4F9);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Flex row for Mem and title */
+.header-title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* space between Mem and title */
+  margin-bottom: 10px;
+}
+
+.mem-left, .mem-right {
+  width: 100px;
+  height: auto;
+}
+
+/* Title and tagline */
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--gold-accent);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.site-tagline {
+  font-size: 1.2rem;
+  color: var(--white);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  margin-bottom: 20px;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.site-nav a:hover {
+  background: var(--gold-accent);
+  color: var(--dark-bg);
+}
+
+/* Section Container */
+.section-container {
+  width: 100%;
+  max-width: 900px;
+  background: var(--card-bg);
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.section-container h2 {
+  font-size: 2rem;
+  color: var(--pink-primary);
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.section-container p {
+  font-size: 1.1rem;
+  color: #F2F2F2;
+  line-height: 1.6;
+}
+
+/* Hobbies Cards */
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.hobbies-title {
+  font-size: 2rem;
+  color: var(--gold-accent);
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  text-align: center;
+  width: 100%;
+}
+
+.hobby-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  border: 2px solid var(--gold-accent);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 260px;
+}
+
+.hobby-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px var(--gold-accent), 0 0 25px var(--pink-primary);
+}
+
+.hobby-card h3 {
+  margin-bottom: 12px;
+  color: var(--pink-primary);
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.hobby-card p {
+  color: #F2F2F2;
+}
+
+/* Footer */
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #CBB4F9, #F7B7D9);
+  border-radius: 20px;
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.2);
+  position: relative;
+  margin-top: 50px;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.site-footer p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--gold-accent);
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
